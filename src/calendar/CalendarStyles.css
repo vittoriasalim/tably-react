@@ -23,7 +23,7 @@
     --text-color:black;
     --text-color-light:hsl(var(--hue-color),8%,65%);
     --input-color:hsl(var(--hue-color),70%,96%);
-    --body-color:hsl(var(--hue-color),60%,99%);
+    --body-color:hsl(var(--hue-color),28%,12%);
     --container-color:#FFF;
     --scroll-bar-color:hsl(var(--hue-color),12%,90%);
     --scroll-thumb-color:hsl(var(--hue-color),12%,80%);
@@ -74,16 +74,24 @@
 
 
 }
-
+.date-cald{
+    border:0;
+}
 .navigator_default_main{
-    width:300px;
+    
+    min-width:300px;
     border:none;
+    background-color: transparent;
+    /* padding-top: 10rem; */
+ 
     
     
 
 }
 .navigator_default_month{
-    width:300px;
+    
+    width: 100%;
+   
     border:none;
     border-radius: var(--mb-1-5);
     background-color: var(--first-color);
@@ -132,6 +140,7 @@
 .calendar_default_corner{
     border:none;
     min-width: 100px;
+    margin-bottom:var(--mb-1);
     
 }
 .calendar_default_corner_inner{
@@ -146,19 +155,23 @@
     border:none;
     margin-bottom:var(--mb-1);
 
+
     
     /* background-color: transparent; */
 
 }
 .calendar_default_cornerright_inner{
+    height: 100%;
    
     border:none;
     border-top-right-radius:2rem ;
-    border-bottom-right-radius:2rem ;
-    background-color: var(--first-color);
+    border-bottom-right-radius:2rem ; 
+
+    background-color: var(--first-color-lighter);
+    border-bottom: 0.5rem solid var(--first-color-alt);
     
     /* background-color: transparent; */
-
+ 
 }
 .calendar_default_colheader{
     min-height:50px;
@@ -173,6 +186,8 @@
     border:none;
     color:var(--first-color);
     font-weight: bolder;
+    border-bottom: 0.5rem solid var(--first-color-alt);
+  
     
   
     background-color: var(--first-color-lighter);
@@ -186,7 +201,8 @@
 .calendar_default_rowheader_inner{
     background-color: transparent;
     border-right: none;
-
+    border-bottom: 0.5rem solid var(--first-color-lighter);
+    
 
 }
 .calendar_default_rowheader_inner div{
@@ -210,3 +226,23 @@
     opacity: 50%;
 }
 
+/* DAY TASK */
+.day-cald{
+    margin-top: var(--mb-3);
+    height:500px;
+    max-width:310px;
+    /* width: 100%; */
+    margin-left:-100px;
+
+    /* background-color: red; */
+    
+}
+
+.day-cald .calendar_default_rowheader{
+    visibility:collapse;
+
+}
+.day-cald .calendar_default_colheader_inner{
+    border-top-left-radius: var(--mb-1);
+    border-bottom-left-radius: var(--mb-1);
+}
