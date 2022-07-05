@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {DayPilot, DayPilotCalendar, DayPilotNavigator, DayPilotScheduler} from "@daypilot/daypilot-lite-react";
+import {DayPilot, DayPilotCalendar, DayPilotNavigator} from "@daypilot/daypilot-lite-react";
 import "./CalendarStyles.css";
 
 const styles = {
@@ -27,7 +27,7 @@ class Calendar extends Component {
     
     this.state = {
       
-      viewType: "day",
+      viewType: "Week",
       durationBarVisible: false,
       timeRangeSelectedHandling: "Enabled",
       onTimeRangeSelected: async args => {
