@@ -1,0 +1,360 @@
+
+
+/*==================== GOOGLE FONTS ====================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+    --header-width:3rem;
+
+
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color:230; /*142-green Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+    /* HSL color mode */
+    --first-color:hsl(var(--hue-color),69%,61%);
+    --first-color-second:hsl(var(--hue-color),69%,61%);
+    --first-color-alt:hsl(var(--hue-color),57%,53%);
+    --first-color-lighter:hsl(var(--hue-color),92%,85%);
+    --date-color:rgb(214, 140, 140);
+    --arrow-color:rgb(162, 209, 162);
+    --title-color:hsl(var(--hue-color),8%,15%);
+    --text-color:hsl(var(--hue-color),8%,45%);
+    --text-color-light:hsl(var(--hue-color),8%,65%);
+    --input-color:hsl(var(--hue-color),70%,96%);
+    --body-color:hsl(var(--hue-color),60%,99%);
+    --container-color:#FFF;
+    --scroll-bar-color:hsl(var(--hue-color),12%,90%);
+    --scroll-thumb-color:hsl(var(--hue-color),12%,80%);
+
+    /*========== Font and typography ==========*/
+    --body-font:"Poppins",sans-serif;
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size:2rem;
+    --h1-font-size:1.5rem;
+    --h2-font-size:1.25rem;
+    --h3-font-size:1.125rem;
+    --normal-font-size:1.2rem;
+    --small-font-size:.813rem;
+    --smaller-font-size:.75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium:600;
+    --font-semi-bold:500;
+
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25:.25rem;
+    --mb-0-5:.5rem;
+    --mb-0-75:.75rem;
+    --mb-1:1rem;
+    --mb-1-5:1.5rem;
+    --mb-2:2rem;
+    --mb-2-5:2.5rem;
+    --mb-3:3rem;
+
+    /*========== z index ==========*/
+    --z-tooltip:10;
+    --z-fixed:100;
+    --z-modal:1000;
+}
+
+
+/* ================== LAYOUTS ============ */
+
+a {
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+    /* padding-bottom: var(--mb-3); */
+}
+/*==================== BASE ====================*/
+.section__title{
+    font-size:var(--h1-font-size);
+    font-family: 'Pacifico', cursive;
+}
+.section__subtitle{
+    display:block;
+    font-size:var(--small-font-size);
+    margin-bottom:var(--mb-3);
+}
+/* main{
+    padding-top:12rem;
+
+} */
+/*==================== NAV ====================*/
+
+.nav-logo{
+    font-size: 1.8rem;
+    font-family: 'Pacifico', cursive;
+    color:var(--first-color)
+}
+.nav-item{
+    padding-bottom: var(--mb-3);
+}
+
+.flex-column{
+    display: none;
+
+}
+.list-nav{
+    display:none;
+
+}
+.nav-icon{
+    color:var(--first-color-alt)
+}
+
+.nav-icon:hover{
+    padding:0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: var(--mb-3);
+    background-color: var(--first-color-lighter);
+}
+main{
+    display:-webkit-flex;
+    align-items: left;
+    width:100%;
+    margin-top:var(--mb-3);
+
+    /* justify-content: space-between; */
+}
+
+.nav-menu{
+    position:fixed;
+    height:100%;
+
+    width:10%;
+    margin:0px;
+    /* background-color: var(--first-color); */
+}
+
+.main-body{
+    width: 90%;
+    padding-left: 1.5rem;
+   
+ 
+    /* margin-left: var(--mb-2); */
+    /* background-color: var(--first-color-lighter); */
+}
+
+/* ================== CALENDAR ===================== */
+.cld-main{
+    width: 350px;
+    padding-top:var(--mb-2);
+    padding-right:var(--mb-1);
+    padding-left:var(--mb-1);
+    padding-bottom:var(--mb-2);
+    background-color: var(--first-color-lighter);
+    border-radius: var(--mb-2-5);
+    /* font-family: 'Pacifico', cursive; */
+    /* font-family: 'Pacifico'; */
+    font-family: var(--body-font);
+    font-weight: var(--font-semi-bold);
+    color:var(--title-color);
+}
+.cld-datetime{
+
+    position: relative;
+    width: 66%;
+    min-width: 100px;
+    max-width: 300px;
+    margin: auto;
+    overflow: hidden;
+    
+}
+.cld-datetime .today{
+    position: relative;
+    float: left;
+    width: calc(100% - 40px);
+    margin: auto;
+    text-align: center;
+    
+}
+.cld-nav{
+    
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    
+}
+.cld-nav:hover{
+    cursor: pointer;
+
+
+}
+.cld-nav:hover svg{
+   
+    fill:white;
+ 
+    
+}
+.cld-rwd{
+    float: left;
+}
+.cld-fwd{
+    float: right;
+}
+.cld-nav svg:hover{
+
+}
+.cld-labels, .cld-days{
+    padding-left: 0;
+
+}
+.cld-label{
+    color:var(--text-color);
+}
+.cld-label, .cld-day{
+    display: inline-block;
+    width: 14.28%;
+    text-align: center;
+    
+}
+.cld-day.today .cld-number{
+    display: inline-block;
+    width:var(--mb-2);
+    border-radius: var(--mb-3);
+    background: var(--first-color);
+    color: #fff;
+}
+.cld-day.disableDay{
+    opacity: 0.5;
+}
+.cld-day.nextMonth, .cld-day.prevMonth{
+    opacity: 0.33;
+}
+.cld-number{
+    position: relative;
+    margin: 5px;
+    padding: 5px;
+    /* background-color: red; */
+}
+.cld-number:hover{
+    cursor: pointer;
+    border-radius: var(--mb-2);
+    background-color:var(--date-color);
+}
+.cld-title{
+    position: absolute;
+    z-index: 5;
+    display: none;
+    top: 30px;
+    left: 0;
+    padding: 5px 10px;
+    background: #fff;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.cld-number:hover .cld-title{
+    display: block;
+}
+.cld-title::before{
+    content: '';
+    position: absolute;
+    top: -7.5px; left: 7.5px;
+    width: 0;
+    height: 0;
+    border-left: 7.5px solid transparent;
+    border-right: 7.5px solid transparent;
+
+    border-bottom: 7.5px solid #ccc;
+}
+.cld-number.eventday{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    border: 1px solid #999;
+}
+.cld-number.eventday:hover{
+    cursor: pointer;
+    background: #eee;
+
+}
+.today .cld-number.eventday:hover{
+    background: #888;
+}
+
+/* ================== MEDIA QUERIES ===================== */
+/* for small devices */
+@media screen and (min-width:350px) {
+    .nav-flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap:10rem;
+    }
+
+    /* .list-nav{
+        display: flex;
+        font-size:20px;
+    } */
+    .list-nav{
+        display: flex;
+        font-size:var(--big-font-size);
+        color:var(--first-color-alt);
+    }
+    .cld-main{
+        width:275px;
+        padding-top: var(--mb-1-5);
+        padding-bottom: var(--mb-1-5);
+        font-size:var(--small-font-size);
+    }
+    .main-body{
+
+    }
+ 
+    
+}
+
+/* for medium devices */
+@media screen and (min-width: 568px) {
+    .flex-column{
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        width:var(--header-width);
+        height: var(--header-height);
+        border-right: var(--mb-0-25)  solid var(--first-color);
+        border-top-right-radius: var(--mb-2-5);
+        border-bottom-right-radius: var(--mb-2-5);
+        padding-top:var(--mb-1-5);
+
+    }
+    .main-body{
+        margin-left: 6rem;
+
+    }
+    .list-nav{
+        display: none;
+    }
+    .nav-icon{
+        
+        font-size:var(--normal-font-size);
+    }
+    .nav-logo{
+        font-size: 2.5rem;
+    }
+
+
+
+  
+    
+}
+/* tabler */
+@media screen and (min-width: 800px) {
+
+
+    
+}
+/* for large devices */
+@media screen and (min-width:1024px) {
+
+}
