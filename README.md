@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project includes a [DayPilot Lite for JavaScript](https://javascript.daypilot.org/open-source/).
 
+![](output.png)
 ## License
 
 This project is licensed under Apache License 2.0.
