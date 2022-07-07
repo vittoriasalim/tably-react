@@ -225,24 +225,42 @@
 .calendar_default_event_inner{
     opacity: 50%;
 }
+.calendar_default_cell{
+    background-color: transparent;
+}
+.calendar_default_cell_inner{
+    border-bottom: none;
+
+
+}
 
 /* DAY TASK */
 .day-cald{
     margin-top: var(--mb-3);
     height:500px;
     max-width:310px;
+    margin-left: -100px;
+
     /* width: 100%; */
-    margin-left:-100px;
+    /* margin-left:-100px; */
 
     /* background-color: red; */
     
 }
 
 .day-cald .calendar_default_rowheader{
-    visibility:collapse;
+    /* max-width: 50px; */
+    visibility: collapse;
+
+
+}
+.day-cald .calendar_default_rowheader_inner{
+    /* max-width: 50px; */
+
 
 }
 .day-cald .calendar_default_colheader_inner{
     border-top-left-radius: var(--mb-1);
     border-bottom-left-radius: var(--mb-1);
 }
+

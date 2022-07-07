@@ -63,27 +63,27 @@ class Calendar extends Component {
       events: [
         {
           id: 1,
-          text: "Event 1",
+          text: "Doctor's appointement",
           start: "2022-07-06T10:30:00",
           end: "2022-07-06T13:00:00"
         },
         {
           id: 2,
-          text: "Event 2",
+          text: "Cinema: Thor new movie",
           start: "2022-07-08T09:30:00",
           end: "2022-07-08T11:30:00",
           backColor: "#6aa84f"
         },
         {
           id: 3,
-          text: "Event 3",
+          text: "Grocery: weekly needs",
           start: "2022-07-08T12:00:00",
           end: "2022-07-08T15:00:00",
           backColor: "#f1c232"
         },
         {
           id: 4,
-          text: "Event 4",
+          text: "Visit vivid: light show",
           start: "2022-07-05T11:30:00",
           end: "2022-07-05T14:30:00",
           backColor: "#cc4125"
@@ -97,6 +97,7 @@ class Calendar extends Component {
 
     return (
       <div style={styles.wrap}>
+       
   
         <div class="date-cald" style={styles.left}>
           <DayPilotNavigator
@@ -111,19 +112,20 @@ class Calendar extends Component {
               });
             }}
           />
+      
           <div class="day-cald">
         
+          
             <DayPilotCalendar
-              // {...day_config}
-            
+              {...config}
+              viewType={"day"}
               ref={component => {
                 this.calendar = component && component.control;
               }}
-              
-
             />
 
           </div>
+          
         
         </div>
         
